@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NetGuard Workspace | SOC</title>
+    <!-- Modern Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="app-layout">
+        <!-- Sidebar Navigation -->
+        <aside class="global-sidebar">
+            <div class="sidebar-brand">
+                <i class="fa-solid fa-shield-halved"></i>
+                <span>NetGuard</span>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-item active" data-view="dashboard"><i class="fa-solid fa-chart-pie"></i> Dashboard</a>
+                <a href="#" class="nav-item" data-view="incidents">
+                    <i class="fa-solid fa-triangle-exclamation"></i> Incidents
+                    <span class="badge red">3</span>
+                </a>
+                <a href="#" class="nav-item" data-view="assets"><i class="fa-solid fa-server"></i> Asset Inventory</a>
+                <a href="#" class="nav-item" data-view="topology"><i class="fa-solid fa-network-wired"></i> Network Map</a>
+                <a href="#" class="nav-item" data-view="intel"><i class="fa-solid fa-book-skull"></i> Threat Intel</a>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="user-profile">
+                    <div class="avatar">SA</div>
+                    <div class="user-info">
+                        <span class="name">SysAdmin</span>
+                        <span class="role">L3 Analyst</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <div class="main-content">
+            <!-- Global Topbar -->
+            <header class="global-topbar">
+                <div class="search-bar">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Search incidents, IPs, assets, or CVEs... (Cmd+K)">
+                </div>
+                <div class="topbar-actions">
+                    <div class="scope-selector">
+                        <span>Scope:</span>
+                        <select>
+                            <option>All Regions (Global)</option>
+                            <option>US-East-1</option>
+                            <option>EU-Central</option>
+                        </select>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Workspace View Container -->
+            <main class="workspace" id="workspace">
+                 <!-- JavaScript will inject views here -->
+            </main>
+        </div>
+
+        <!-- Slide-over Investigation Panel -->
+        <div class="slide-panel" id="investigation-panel">
+            <button class="close-panel" id="close-panel" title="Close"><i class="fa-solid fa-xmark"></i></button>
+            <div class="panel-content" id="panel-content">
+                <!-- Injected details -->
+            </div>
+        </div>
+
+        <!-- Toast Notification Container -->
+        <div id="toast-container" class="toast-container"></div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/mockData.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
