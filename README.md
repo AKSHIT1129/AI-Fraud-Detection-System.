@@ -15,12 +15,12 @@ This project is a demonstration of algorithm analysis (DAA) applied to a real-wo
 4. Start the API by running `uvicorn main:app --reload`
 *Note: The model trains itself on startup using a generated dataset.*
 
-### Frontend setup
+## Frontend setup
 1. Ensure Node.js is installed
 2. Open terminal in the `frontend` directory
 3. Run `npm install`
 4. Start the UI by running `npm run dev`
 
-### Deployment
+## Deployment
 - **Backend:** Can be easily containerized or hosted on Render/Heroku as a Web Service.
 - **Frontend:** Can be deployed to Vercel or Netlify by linking the GitHub repository and selecting Vite.
